@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" type="text/css" href="formulariosact.css">
+
+<!-- onblur -->
+    <script>
+        function checkField1() {
+            var field = document.getElementById("field1").value;
+            if(field.length < 5)
+                 document.getElementById("message1").innerHTML = "Too short!";// tan corto
+                 else
+                 document.getElementById("message1").innerHTML = "That is long enough!";// eso es suficiente
+        }
+
+
+        function checkField2() {
+            var field = document.getElementById("field2").value;
+            if(field != "") //!= means not equal-significa no igual
+                 document.getElementById("message2").innerHTML = "Input accepted";// Entrada aceptada
+                 else
+                 document.getElementById("message2").innerHTML = "You must provide input!";// Debes proporcionar información
+        }
+    </script>
+<!-- onblur -->
+
+<!-- JAVASCRIPT -->
+    <script>      
+    function validateForm ()
+    {
+           
+           var pass1 = document.getElementById("password1").value;
+           var pass1 = document.getElementById("password2").value;
+           if (pass1 == pass2)
+
+           {
+            alert("passwords match");
+            return true;
+
+           }
+
+           else
+           {
+            alert("passwords do not match");
+            return false;
+
+           }
+           return false;
+    }          
+</script>
+    
+</head>
+<body>
+<!-- onblur -->
+
+    <p> Check if the form works with this little test (JavaScript event test onblur).</p> 
+    <p> Write a word that identifies you with the number of characters requested by the system (JavaScript event test onblur)</p> 
+    <input id="field1" type="text" onblur="checkField1();"/> <span id="message1"></span>
+    <input id="field2" type="text" onblur="checkField2();"/> <span id="message2"></span>
+    <input id="field3" type="text"/><span id="message3"></span>
+<!-- onblur -->
+
+    <!-- <h1 style="color:blue;">Formulario para escoger carrera universitaria.</h1> -->
+    <!-- <h2 style="color:rgb(104, 104, 197);">Rellene con mucho cuidado el siguiente formulario.</h2> -->
+    <h1 style="text-align:center;">Form to choose a university degree.</h1> 
+    <h2 style="text-align:center;">Fill in the following form very carefully.</h2>
+    
+    <p style="font-family: Arial, Helvetica, sans-serif; text-align:center;"><strong> <em> Choosing a college degree will determine your lifestyle. You must make this decision by evaluating your abilities and skills.
+        There are decisions that must be evaluated consistently. Our institution suggests the university initiation course. It is totally free..</em></strong></p>
+
+    <div align="center"><img src="web_developer.svg" style="width:300px;height:300px;"></div>
+    <!-- <img id="web_developer.svg" src="web_developer.svg"/> -->
+    <!-- <img src="web_developer.svg" style="width:300px;height:300px;"> -->
+   
+    <form action="MySubmitPage1.html" onsubmit="return validateForm();">
+        Enter first name; <br>
+        <input type="text" name="firstname" required><br>
+        Enter user;<br>
+        
+        <input type="text" name="lastname" value="Belkis"><br>
+        User password:<br>
+        <input type="password" id="password1"><br>
+        <input type="password" id="password2"><br>
+
+    <h3>Professional profile</h3>
+
+        <input type="radio" name="perfil" value="Student" checked>Student<br>
+        <input type="radio" name="perfil" value="Profesional">Profesional<br>
+        <input type="radio" name="perfil" value="Not graduated">Not graduated<br>      
+        <br>
+        <br>
+   
+<!--   https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Your_first_HTML_form --> 
+       <fieldset> 
+            <legend>Enter your personal data, these will be registered in the system</legend>
+            <input type="name" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <input type="id" placeholder="Enter your Id">
+            <input type="city" placeholder="Enter your Ciudad">
+
+        </fieldset>
+        <br>
+        <br>
+        
+      <h3>Choose a color that identifies you</h3>
+      <input type="color" name="" id="">
+     
+     <h3>Write your date of birth</h3>
+     <input type="date" name="" id="">
+     <h3>Write a range of professionalization</h3>
+     <input type="range" name="" id="">
+     <h3>From 1 to 10 level of knowledge in the chosen career</h3>
+     <input type="number" name="" id="">
+     
+     
+     <h3>¿Through what means can we contact you?</h3>
+     <input type="radio" id="email" name="gender">
+     <label for="email1">Email</label>
+     <input type="radio" id="telephone" name="gender">
+     <label for="telephone">Telephone</label>
+     <br><br>
+     <h3 style="text-align:center;font-size: 150%;">Choose your career</h3>
+     <select >
+         <option value="Mkt">Marketing</option>
+         <option value="Sciences">Sciences</option>
+         <option value="Programming">Programming</option>
+         <option value="Laws">Laws</option> 
+         <option value="Social comunication">Social comunication</option>
+         <option value="Education">Education</option>
+         <option value="Medicine">Medicine</option>
+         <option value="Anthropology">Anthropology</option>
+         <option value="Astronomy">Astronomy</option>
+         <option value="Languages">Languages</option>
+         <option value="Sociology">Sociology</option>
+         <option value="Others">Others</option>
+
+     </select>
+
+     <textarea name="" id="" cols="40" rows="30" placeholder="Enter your message is important, you can enlarge the box to extend the characters"></textarea>
+     <br>
+     <br>
+     <input type="checkbox" name="" id="check"><label for="check"> Terms and Conditions.
+     <!-- <input type="password" placeholder="Contraseña"> -->
+     <br>
+     <br>
+     <input type="submit" value="Send">
+
+    </form>
+
+    <br>
+    <footer>
+        <H2 >To register in person, go to: </H2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65313502.110442154!2d-109.67578344757878!3d2.3650287321365053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef8ac6b77762b6c7!2sCoursera!5e0!3m2!1ses-419!2sve!4v1601680816336!5m2!1ses-419!2sve" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!-- https://goo.gl/maps/eJm3QPKzSRAp6sKG6 -->
+       
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15691.841167539975!2d-66.91150182257502!3d10.503793780109143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a592cbaaa7315%3A0x8e251652cf41fb4f!2sLa%20Candelaria%2C%20Caracas%2C%20Distrito%20Capital!5e0!3m2!1ses!2sve!4v1594166918756!5m2!1ses!2sve" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+    </footer>
+     <!-- con este codigo puedes ingresar a mi git hub  ver la pagina -->
+    
+</body>
+</html>
+
